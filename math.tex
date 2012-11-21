@@ -1,0 +1,91 @@
+\documentclass[twocolumn]{article}
+
+\title{Mathematics Used in Machine Learning}
+\author{ZhuHanfeng}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Most of the math equations below are encountered by me when I study machine learning.
+and some of them are from some books about data mining.
+
+\end{abstract}
+
+\section{Average}
+Four widely used inequalities.
+
+Harmonic Mean
+\[\frac{n}{\frac{1}{x_1} + \frac{2}{x_2} + \frac{3}{x_3} + ... + \frac{n}{x_n}}\]
+
+Geometric Mean
+\[\sqrt[n]{x_1x_2x_3...x_n}\]
+
+Arithmetic Mean
+\[\frac{x_1 + x_2 + x_3 + ... + x_n}{n}\]
+
+Quadratic Mean(RMS)
+\[\sqrt{\frac{x_1^2 + x_2^2 + x_3^2 + ... + x_n^2}{n}}\]
+
+\[HM \leq GM \leq AM \leq QM\]
+\section{Taylor}
+\[f(x) = \sum_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k\]
+
+\section{E}
+
+\[e = \lim\limits_{\infty}(1+\frac{1}{n})^n\]
+
+\[(1+\frac{1}{n})^n < e < (1+\frac{1}{n})^{(n+1)}\]
+
+\[\sum\limits_{k=0}^{\infty}\frac{\lambda^k}{k!} = e^\lambda\qquad why?\]
+
+apply Taylor
+\[f(x) = e^x = \sum_{k=0}^n\frac{f^{(n)}(x_0)}{k!}{(x-x_0)^k} \]
+\[x_0 = 0\]
+\[f(x) = \sum_{k=0}^n\frac{1}{k!}x^k\]
+
+
+
+
+\section{Normal Distribution \ Gauss Distribution}
+\[X \sim N(\mu, \sigma^2)\]
+
+\[f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\qquad(-\infty < x < +\infty)\]
+
+\[F(x) = \frac{1}{\sqrt{2\pi\sigma}}\int_{-\infty}^x e^{-\frac{(t-u)^2}{2\sigma^2}}d_t \]
+
+\section{Tri functions}
+\[\sin (x+y) = \sin x\cos y + \sin y\cos x\]
+\[\cos (x+y) = \cos x\cos y - \sin x\sin y\]
+
+\[(\sin x)' = \cos x\]
+\[(\cos x)' = -\sin x\]
+
+\[\sinh x = e^x - e^{-x}\]
+\[\cosh x = e^x + e^{-x}\]
+
+\section{Fourier}
+
+\[\int_{-\pi}^{\pi} \sin nx = 0\]
+
+\[\int_{-\pi}^{\pi} \cos nx = 0\]
+
+\section{$\chi^2$ Distribution}
+\[X \sim N(0,1)\]
+\[Y = X^2\]
+\[Y \sim \chi^2(1)\]
+\[f_Y(y) = \frac{1}{\sqrt{2\pi}}y^{-\frac{1}{2}}e^{-\frac{y}{2}}\qquad (y>0)\]
+
+
+\section{Fisher's Method}
+// TODO
+
+\section{Decision Tree}
+\subsection{Gini Impurity}
+\[I_G = \sum_{i=1}^k f_i(1-f_i) = \sum_{i=1}^k (f_i - f_i^2) = 1 - \sum_{i=1}^k f_i^2\]
+
+\subsection{Entropy}
+\[I_E = -\sum_{i=1}^k f_i\log_2{f_i}\]
+
+\end{document}
