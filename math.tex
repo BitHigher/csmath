@@ -104,4 +104,19 @@ Information Theory is something mainly about quantification of infomation.
 \subsection{Mutual Information}
 \[I(X;Y) = \sum_{x \in X, y \in Y}p(x,y) \log_2 \frac{p(x,y)}{p(x)p(y)}\]
 \[I(X;Y) = H(X) - H(X|Y) = H(X) + H(Y) - H(X,Y)\]
+
+\section{Matrix}
+Let $A = (A_{ij})$ be an $m \times n$ matrix and Let $B = (B_{ij})$ be an $n \times p$ matrix.
+Then $AB$ is an $m \times p$ matrix and
+\[
+	(AB)_{ij} = \sum_{k=1}^n A_{ik}B_{kj}
+\]
+
+\section{Cramer's Rule}
+Suppose $A$ is an $n \times n$ matrix and it is desired to solve the system $Ax=y, y=(y_1,...,y_n)^T$ for $x = (x_1,...,x_n)^T$. Then Cramer's rule says
+\[
+	x_i = \frac{\det A_i}{\det A}
+\]
+where $A_i$ is obtained from A by replacing the $i^{th}$ column of A with $(y_1,..,y_n)^T$.
+
 \end{document}
