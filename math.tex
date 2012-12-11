@@ -113,10 +113,26 @@ Then $AB$ is an $m \times p$ matrix and
 \]
 
 \section{Cramer's Rule}
-Suppose $A$ is an $n \times n$ matrix and it is desired to solve the system $Ax=y, y=(y_1,...,y_n)^T$ for $x = (x_1,...,x_n)^T$. Then Cramer's rule says
+Suppose $A$ is an $n \times n$ matrix and det(A) is not zero.It is desired to solve the system $Ax=y, y=(y_1,...,y_n)^T$ for $x = (x_1,...,x_n)^T$. Then Cramer's rule says
 \[
 	x_i = \frac{\det A_i}{\det A}
 \]
 where $A_i$ is obtained from A by replacing the $i^{th}$ column of A with $(y_1,..,y_n)^T$.
+
+\section{Cayley Hamilton Theorem}
+Let $A$ be an $n \times n$ matrix.The \emph{characteristic polynomial} is defined as
+\[
+	p_A(t) = det(tI - A)
+\]
+and the solutions to $p_A(t) = 0$ are called \emph{eigenvalues}.
+\[
+	p(A) = A^n + a_{n-1}A^{n-1} + ... + a_1A + a_0I
+\]
+
+\section{Radial Basis Function}
+\[
+	K(x_i, x_j) = e^{-\gamma \|x_i - x_j \|^2}
+\]
+
 
 \end{document}
