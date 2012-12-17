@@ -8,8 +8,7 @@
 \maketitle
 
 \begin{abstract}
-Most of the math equations below are encountered by me when I study machine learning.
-and some of them are from some books about data mining.
+Most of the math formulas below are encountered when I study machine learning,and some of them are from some books about data mining.
 
 \end{abstract}
 
@@ -44,7 +43,6 @@ apply Taylor
 \[f(x) = e^x = \sum_{k=0}^n\frac{f^{(n)}(x_0)}{k!}{(x-x_0)^k} \]
 \[x_0 = 0\]
 \[f(x) = \sum_{k=0}^n\frac{1}{k!}x^k\]
-
 
 
 
@@ -134,5 +132,28 @@ and the solutions to $p_A(t) = 0$ are called \emph{eigenvalues}.
 	K(x_i, x_j) = e^{-\gamma \|x_i - x_j \|^2}
 \]
 
+\section{Distance / Similarity}
+
+\subsection{Euclidean Distance}
+\[
+	d = \sqrt{\sum_{i=1}^n (p_i - q_i)^2}
+\]
+
+\subsection{Pearson Correlation Cofficient}
+\[
+	p(X, Y) = \frac{COV(X, Y)}{\sqrt{D(X) D(Y)}}
+\]
+\[
+	COV(X, Y) = E[E(X-\overline{X})E(Y-\overline{Y})]
+\]
+\[
+	D(X) = E[E(X-\overline{X})E(X-\overline{X})]
+\]
+
+\subsection{Tanimoto Coefficient}
+The \emph{tanimoto cofficient} is a measure of the similarity of two sets. If you have two sets, A and B. 
+\[
+	T = \frac{count(A \cap B)}{count(A \cup B)}
+\]
 
 \end{document}
