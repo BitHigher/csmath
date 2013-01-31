@@ -49,9 +49,9 @@ apply Taylor
 \section{Normal Distribution \ Gauss Distribution}
 \[X \sim N(\mu, \sigma^2)\]
 
-\[f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\qquad(-\infty < x < +\infty)\]
+\[f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\qquad(-\infty < x < +\infty)\]
 
-\[F(x) = \frac{1}{\sqrt{2\pi\sigma}}\int_{-\infty}^x e^{-\frac{(t-u)^2}{2\sigma^2}}d_t \]
+\[F(x) = \frac{1}{\sqrt{2\pi}\sigma}\int_{-\infty}^x e^{-\frac{(t-u)^2}{2\sigma^2}}d_t \]
 
 \section{Tri functions}
 \[\sin (x+y) = \sin x\cos y + \sin y\cos x\]
@@ -161,5 +161,13 @@ The \emph{tanimoto cofficient} is a measure of the similarity of two sets. If yo
 \[P(A_1, A_2 | V) = \frac{P(A_1, A_2, V)}{P(A_2, V)} \times \frac{P(A_2, V)}{P(V)} \]
 \[P(A_1, A_2 | V) = P(A_1 | A_2, V) \times P(A_2 | V) \]
 
+\section{Distribution}
+\subsection{Gamma Function}
+\[\Gamma (x) = \int_0^xt^{x-1}e^{-t}dt \]
+
+\subsection{Beta Function}
+\[B(m,n) = \int_0^1 x^{m-1}(1-x)^{n-1}dx  \]
+
+\[B(m,n) = \frac{\Gamma (m)\Gamma (n)}{\Gamma (m+n+1)} (if \Gamma (n) = (n-1)!) \]
 
 \end{document}
