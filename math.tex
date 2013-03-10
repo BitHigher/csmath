@@ -169,4 +169,11 @@ The \emph{tanimoto cofficient} is a measure of the similarity of two sets. If yo
 \[B(m,n) = \int_0^1 x^{m-1}(1-x)^{n-1}dx  \]
 \[B(m,n) = \frac{\Gamma(m)\Gamma(n)}{\Gamma(m+n)} ~~(if ~ \Gamma(n) = (n-1)!) \]
 
+
+\section{Entropy}
+
+\subsection{Kullback-Leibler divergence}
+\[D_{KL}(P||Q) = \sum_x{P(x) (-\log(Q(x)) + \log(P(x)) )}\]
+\[D_{KL}(P||Q) = \sum_x{P(x) \log(\frac{P(x)}{Q(x)})} \]
+
 \end{document}
