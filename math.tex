@@ -176,4 +176,16 @@ The \emph{tanimoto cofficient} is a measure of the similarity of two sets. If yo
 \[D_{KL}(P||Q) = \sum_x{P(x) (-\log(Q(x)) + \log(P(x)) )}\]
 \[D_{KL}(P||Q) = \sum_x{P(x) \log(\frac{P(x)}{Q(x)})} \]
 
+\subsection{Proof of Cross Entropy (Gibbs Inequality)}
+\emph{P} is the true distribution and \emph{Q} is the approximation of \emph{P}.
+\[H(P, Q) = -\sum_i{p_i \log q_i} \]
+
+\begin{eqnarray*}
+H(P, Q) - H(P, P) &=& -\sum{p_i \log \frac{q_i}{p_i}} \\
+				& \geq & \sum{p_i (1-\frac{q_i}{p_i})} ~~(\ln x \leq x-1)\\
+				& \geq & \sum{p_i} - \sum{q_i}\\
+				& \geq & 1 - \sum{p_i}\\
+				& \geq & 0
+\end{eqnarray*}
+
 \end{document}
